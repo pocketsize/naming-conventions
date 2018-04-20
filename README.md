@@ -105,8 +105,8 @@ section.page {
     .page-social-icon {
         width: 20px;
         height: 20px;
-        &.is-facebook { background('../images/facebook.png'); }
-        &.is-instagram { background('../images/instagram.png'); }
+        &.is-facebook { @include background('../images/facebook.png'); }
+        &.is-instagram { @include background('../images/instagram.png'); }
     }
 }
 ```
