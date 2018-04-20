@@ -2,13 +2,13 @@
 
 Base rule: `{block}-{element} [is/has]-{modifier}`
 
-When you need to add another element in your mark-up for styling purposes that serves no purpose without the element it's wrapping or contained within it should be called it should be named as follows:
-* `{block}-{element}-wrapper` or `{block}-{element}-outer` for outer elements
-* `{block}-{element}-container` or `{block}-{element}-inner` for inner elements
+The block part of the class should describe the scope.
+The element part of the class should describe what the element is.
+Only the modifier class can describe what the element looks like.
 
-Both are correct but choose one of `wrapper`/`container` or `outer`/`inner` and use it consistently.
-
-Classes should describe what an element is, not what it looks like.
+When you need to add another element in your mark-up for styling purposes that serves no purpose without the element it's wrapping or contained within it should be named as follows:
+* `{block}-{element}-outer` for outer elements
+* `{block}-{element}-inner` for inner elements
 
 ## Examples
 
