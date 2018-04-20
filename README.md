@@ -103,6 +103,7 @@ section.page {
 	.page-social-icons { @include inline-layout(10px); }
 
 	.page-social-icon {
+		display: block;
 		width: 20px;
 		height: 20px;
 		&.is-facebook { @include background('../images/facebook.png'); }
