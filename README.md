@@ -78,7 +78,9 @@ p, ul {
 
 section.page {
 	.page-inner { @include container; }
+
 	.page-title { @extend %title-primary; }
+
 	.page-content { @extend %wysiwyg; }
 	
 	.page-links-title { @extend &title-secondary; }
@@ -106,6 +108,7 @@ section.page {
 		display: block;
 		width: 20px;
 		height: 20px;
+
 		&.is-facebook { @include background('../images/facebook.png'); }
 		&.is-instagram { @include background('../images/instagram.png'); }
 	}
