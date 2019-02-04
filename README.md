@@ -56,7 +56,9 @@ Here are a couple of code examples.
 Apart from the Bolts reset, we do not write global styles. For common styles we create shadow classes that we extend on the relevant elements in each block scope.
 
 ```scss
-%title { font-weight: 700; }
+%title {
+	font-weight: 700;
+}
 
 %title-primary {
 	@extend %title;
@@ -68,49 +70,77 @@ Apart from the Bolts reset, we do not write global styles. For common styles we 
 	font-size: 1.5em;
 }
 
-p, ul {
-	%wysiwyg & + & { margin-top: 1em; }
+p,
+ul {
+	%wysiwyg & + & {
+		margin-top: 1em;
+	}
 }
 
 %wysiwyg {
-	p, li { line-height: 1.6; }
+	p,
+	li {
+		line-height: 1.6;
+	}
 }
 
-section.page {
-	.page-inner { @include container; }
+.page {
+	&-inner {
+		@include container;
+	}
 
-	.page-title { @extend %title-primary; }
+	&-title {
+		@extend %title-primary;
+	}
 
-	.page-content { @extend %wysiwyg; }
+	&-content {
+		@extend %wysiwyg;
+	}
 	
-	.page-links-title { @extend &title-secondary; }
+	&-links-title {
+		@extend &title-secondary;
+	}
 	
-	.page-links {
+	&-links {
 		@include inline-layout(20px);
 	}
 	
-	.page-link-outer {
-		@media ( width-to(medium) ) { width: 50%; }
-		@media ( width-from(medium) ) { width: 25%; }
+	&-link-outer {
+		@media ( width-to(medium) ) {
+			width: 50%;
+		}
+		@media ( width-from(medium) ) {
+			width: 25%;
+		}
 	}
 	
-	.page-link {
+	&-link {
 		display: inline-block;
 
-		&:hover { text-decoration: underline; }
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
-	.page-social-icons-title { @extend &title-secondary; }
+	&-social-icons-title {
+		@extend &title-secondary;
+	}
 
-	.page-social-icons { @include inline-layout(10px); }
+	&-social-icons {
+		@include inline-layout(10px);
+	}
 
-	.page-social-icon {
+	&-social-icon {
 		display: block;
 		width: 20px;
 		height: 20px;
 
-		&.is-facebook { @include background('../images/facebook.png'); }
-		&.is-instagram { @include background('../images/instagram.png'); }
+		&.is-facebook  {
+			@include background('../images/facebook.png');
+		}
+		&.is-instagram {
+			@include background('../images/instagram.png');
+		}
 	}
 }
 ```
